@@ -1,0 +1,29 @@
+{
+  "name": "eleventy-plugin-postcss",
+  "version": "0.0.1",
+  "description": "Eleventy plugin for PostCSS",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pewstiepoll/eleventy-plugin-postcss.git"
+  },
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "postcss",
+    "post",
+    "css"
+  ],
+  "author": "Vadym (https://github.com/pewstiepoll)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pewstiepoll/eleventy-plugin-postcss/issues"
+  },
+  "homepage": "https://github.com/pewstiepoll/eleventy-plugin-postcss#readme",
+  "dependencies": {
+    "postcss": "8.4.8"
+  }
+}
