@@ -1,5 +1,3 @@
-# OS
 .DS_Store
-
-# Project level and NPM
 node_modules
+demo/_site
