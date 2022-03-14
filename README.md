@@ -25,6 +25,7 @@ module.exports = (config) => {
 3. (Optional) Create a `.postcssrc.{json,yml}` config file for additional configuration.
 
 ## Contribute
-Feel free to open a github issue for any suggestions, bug reports, feature requirements.
+Feel free to open a Github issue for suggestions, bug reports, feature requirements.
 
 ## Keywords
+Eleventy, 11ty, @11ty/eleventy, PostCSS, post-css, postcss-plugin-eleventy
