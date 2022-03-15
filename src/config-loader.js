@@ -1,36 +1,37 @@
-const postcssrc = require("postcss-load-config");
+const postcssrc = require('postcss-load-config');
 
 /**
  * Loads and stores post-css config from ".postcssrc"
  */
 class Config {
-    constructor() {
-        this._plugins = [];
-        this._options = {};
-    }
+  constructor() {
+    this._plugins = [];
+    this._options = {};
+  }
 
-    async tryLoad(loader = postcssrc) {
-        try {
-            const { plugins, options } = await loader();
+  async tryLoad(loader = postcssrc) {
+    try {
+      const { plugins, options } = await loader();
 
-            this._plugins = plugins;
-            this._options = options;
-        } catch (e) {
-            console.log(e);
-        }
+      this._plugins = plugins;
+      this._options = options;
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.log(e);
     }
+  }
 
-    getPlugins() {
-        return this._plugins;
-    }
+  getPlugins() {
+    return this._plugins;
+  }
 
-    getOptions() {
-        return this._options;
-    }
+  getOptions() {
+    return this._options;
+  }
 
-    getProcessorConfig(from, to) {
-        return { ...this._options, from, to };
-    }
+  getProcessorConfig(from, to) {
+    return { ...this._options, from, to };
+  }
 }
 
 module.exports = new Config();

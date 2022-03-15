@@ -1,7 +1,7 @@
-const Config = require("./config-loader");
-const PostCSS = require("./post-css");
+const Config = require('./config-loader');
+const PostCSS = require('./post-css');
 
-const OUTPUT_FILE_EXTENSION = "css";
+const OUTPUT_FILE_EXTENSION = 'css';
 
 module.exports = {
   outputFileExtension: OUTPUT_FILE_EXTENSION,
