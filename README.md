@@ -5,14 +5,14 @@ A small plugin for [@11ty/eventy](https://www.11ty.dev/) that enables the suppor
 - `@11ty/eleventy@^1.0.0`
 
 ## Features
-- [x] 😌 Simple. Easy to install, requires minimum configuration.
-- [x] ⭐️ Modern. Compatible with the most recent major eleventy version.
-- [x] 🗂 Seamless. Supports the following file extensions: `.css`, `.postcss`, `.pcss`.
-- [x] ⚙️ Configurable. Supports PostCSS configuration via `.postcssrc` file.
+- 😌 Simple. Easy to install, requires minimum configuration.
+- ⭐️ Modern. Compatible with the most recent major eleventy version.
+- 🗂 Seamless. Supports the following file extensions: `.css`, `.postcss`, `.pcss`.
+- ⚙️ Configurable. Supports PostCSS configuration via `.postcssrc` file.
 
 ## Usage
-1. Install via npm `npm install eleventy-plugin-postcss`
-2. Add the following line to your `.eleventy.js`:
+1. Install: `npm install --save-dev eleventy-plugin-postcss`
+2. Add the following lines to the `.eleventy.js`:
 ```js
 // Import the plugin
 const PostCSSPlugin = require("eleventy-plugin-postcss");
@@ -26,6 +26,3 @@ module.exports = (config) => {
 
 ## Contribute
 Feel free to open a Github issue for suggestions, bug reports, feature requirements.
-
-## Keywords
-Eleventy, 11ty, @11ty/eleventy, PostCSS, post-css, postcss-plugin-eleventy
