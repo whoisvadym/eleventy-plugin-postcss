@@ -1,6 +1,6 @@
 {
   "name": "eleventy-plugin-postcss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Eleventy plugin for PostCSS",
   "main": ".eleventy.js",
   "engines": {
