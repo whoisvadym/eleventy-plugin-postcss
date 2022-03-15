@@ -12,6 +12,7 @@
   "scripts": {
     "demo": "npx @11ty/eleventy --input=demo --output=demo/_site --config=demo/.eleventy.js",
     "start": "npx @11ty/eleventy --input=demo --output=demo/_site --config=demo/.eleventy.js --serve",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -37,6 +38,9 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
     "postcss-mixins": "9.0.2",
     "postcss-preset-env": "7.4.2"
   }
