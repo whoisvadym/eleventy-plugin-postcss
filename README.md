@@ -7,8 +7,8 @@ A small plugin for [@11ty/eventy](https://www.11ty.dev/) that enables the suppor
 ## Features
 - 😌 Simple. Easy to install, requires minimum configuration.
 - ⭐️ Modern. Compatible with the most recent major eleventy version.
-- 🗂 Seamless. Supports the following file extensions: `.css`, `.postcss`, `.pcss`.
-- ⚙️ Configurable. Supports PostCSS configuration via `.postcssrc` file.
+- 🗂 Flexible. Supports the following file extensions: `.css`, `.postcss`, `.pcss`.
+- ⚙️ Configurable. Supports PostCSS configuration via `.postcssrc` file. ([more info](#configuration))
 
 ## Usage
 1. Install: `npm install --save-dev eleventy-plugin-postcss`
@@ -22,7 +22,10 @@ module.exports = (config) => {
     config.addPlugin(PostCSSPlugin);
 }
 ```
-3. (Optional) Create a `.postcssrc.{json,yml}` config file for additional configuration.
+3. (Optional) Create a `.postcssrc.{json,yml,...}` config file for additional configuration. ([more info](#configuration)).
+
+## Configuration
+To load and resolve the configuration file the plugin uses [`postcss-load-config`](https://github.com/postcss/postcss-load-config) module. Check out the project [readme](https://github.com/postcss/postcss-load-config#readme) for the complete list of supported config file formats.
 
 ## Contribute
 Feel free to open a Github issue for suggestions, bug reports, feature requirements.
