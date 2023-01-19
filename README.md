@@ -28,4 +28,4 @@ module.exports = (config) => {
 To load and resolve the configuration file the plugin uses [`postcss-load-config`](https://github.com/postcss/postcss-load-config) module. Check out the project [readme](https://github.com/postcss/postcss-load-config#readme) for the complete list of supported config file formats.
 
 ## Contribute
-Feel free to open a Github issue for suggestions, bug reports, feature requirements.
+Feel free to open a Github issue for suggestions, bug reports, feature requests.
