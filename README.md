@@ -27,14 +27,15 @@ module.exports = (config) => {
 ## Configuration
 To load and resolve the configuration file the plugin uses [`postcss-load-config`](https://github.com/postcss/postcss-load-config) module. Check out the project [readme](https://github.com/postcss/postcss-load-config#readme) for the complete list of supported config file formats.
 
-If you want to ignore CSS files that start with `_` to be processed, you can pass the `ignoreUnderscore` option to the plugin:
+If you want to ignore CSS files, you can use the option `ignorePattern` to filter files based on a regular expression:
+
 ```js
 // Import the plugin
 const PostCSSPlugin = require("eleventy-plugin-postcss");
 
 module.exports = (config) => {
     // Enable the plugin in you project
-    config.addPlugin(PostCSSPlugin, { ignoreUnderscore: true });
+    config.addPlugin(PostCSSPlugin, { ignorePattern: /^_/});
 }
 ```
 

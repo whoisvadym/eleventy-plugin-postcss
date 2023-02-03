@@ -14,3 +14,8 @@ test('end-2-end', (t) => {
   t.snapshot(presetOutput);
   t.snapshot(nestingOutput);
 });
+
+test('ignored files are not created', (t) => {
+  const exists = fs.existsSync(path.resolve(process.cwd(), demoFolderRelativePath, '_import.css'));
+  t.falsy(exists);
+});

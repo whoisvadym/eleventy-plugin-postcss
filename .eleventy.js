@@ -2,11 +2,9 @@
 const EleventyConfig = require('@11ty/eleventy/src/UserConfig');
 const extension = require('./src/extension');
 const pkg = require('./package.json');
+const { DEFAULT_PLUGIN_OPTIONS } = require('./src/plugin-options');
 
 const SUPPORTED_FORMATS_LIST = ['css', 'postcss', 'pcss'];
-const DEFAULT_PLUGIN_OPTIONS = {
-  ignoreUnderscore: false,
-};
 
 /**
  * Validates the eleventy version.
