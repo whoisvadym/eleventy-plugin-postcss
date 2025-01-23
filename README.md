@@ -2,7 +2,8 @@
 A small plugin for [@11ty/eventy](https://www.11ty.dev/) that enables the support for [PostCSS](https://postcss.org/) pre-processor in you eleventy project.
 
 ## Requirements
-- `@11ty/eleventy@^1.0.0`
+- `node@^18.0.0`
+- `@11ty/eleventy@^3.0.0`
 
 ## Features
 - 😌 Simple. Easy to install, requires minimum configuration.
