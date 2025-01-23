@@ -1,30 +1,8 @@
-// eslint-disable-next-line no-unused-vars, import/no-extraneous-dependencies
-const EleventyConfig = require('@11ty/eleventy/src/UserConfig');
-const Extension = require('./src/extension');
-const pkg = require('./package.json');
+import Extension from "./src/extension.js";
 
-const SUPPORTED_FORMATS_LIST = ['css', 'postcss', 'pcss'];
+export const SUPPORTED_FORMATS_LIST = ["css", "postcss", "pcss"];
 
-/**
- * Validates the eleventy version.
- * @param {EleventyConfig} config
- */
-function validateEleventyVersion(config) {
-  try {
-    config.versionCheck(pkg['11ty'].compatibility);
-  } catch (e) {
-    // eslint-disable-next-line no-console
-    console.log(`WARN: Eleventy Plugin (${pkg.name}) Compatibility: ${e.message}`);
-  }
-}
-
-/**
- *
- * @param {EleventyConfig} config
- */
-module.exports = function EleventyPluginPostCSS(config) {
-  validateEleventyVersion(config);
-
+export default async function EleventyPluginPostCSS(config) {
   SUPPORTED_FORMATS_LIST.forEach((format) => {
     // Add template formats that will be processed by this plugin
     config.addTemplateFormats(format);
@@ -32,4 +10,4 @@ module.exports = function EleventyPluginPostCSS(config) {
     // Add an extension per each supported format)
     config.addExtension(format, Extension);
   });
-};
+}

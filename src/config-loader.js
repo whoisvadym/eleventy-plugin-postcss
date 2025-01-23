@@ -1,9 +1,9 @@
-const postcssrc = require('postcss-load-config');
+import postcssrc from "postcss-load-config";
 
 /**
  * Loads and stores post-css config from ".postcssrc"
  */
-class Config {
+export class Config {
   constructor() {
     this._plugins = [];
     this._options = {};
@@ -16,7 +16,6 @@ class Config {
       this._plugins = plugins;
       this._options = options;
     } catch (e) {
-      // eslint-disable-next-line no-console
       console.log(e);
     }
   }
@@ -34,5 +33,5 @@ class Config {
   }
 }
 
-module.exports = new Config();
-module.exports.ConfigLoaderConstructor = Config;
+export default new Config();
+export { Config as ConfigLoaderConstructor };
