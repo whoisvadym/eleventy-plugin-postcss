@@ -15,7 +15,17 @@ A small plugin for [@11ty/eventy](https://www.11ty.dev/) that enables the suppor
 1. Install: `npm install --save-dev eleventy-plugin-postcss`
 2. Add the following lines to the `.eleventy.js`:
 ```js
-// Import the plugin
+// Import (ES6 modules)
+import PostCSSPlugin from "eleventy-plugin-postcss";
+
+export default function (eleventyConfig) {
+    // Enable the plugin in you project
+    eleventyConfig.addPlugin(PostCSSPlugin);
+}
+```
+OR
+```js
+// CommonJS 
 const PostCSSPlugin = require("eleventy-plugin-postcss");
 
 module.exports = (config) => {
@@ -23,7 +33,23 @@ module.exports = (config) => {
     config.addPlugin(PostCSSPlugin);
 }
 ```
-3. (Optional) Create a `.postcssrc.{json,yml,...}` config file for additional configuration. ([more info](#configuration)).
+3. (Optional) Create a `postcss.config.js` config file for additional configuration. ([more info](#configuration)). Example:
+```js
+import mixins from "postcss-mixins";
+import nested from "postcss-nested";
+import preset from "postcss-preset-env";
+
+/** @type {import('postcss-load-config').Config} */
+const config = {
+  plugins: [
+    mixins(),
+    nested(),
+    preset({ stage: "0" })
+  ]
+}
+
+export default config;
+```
 
 ## Configuration
 To load and resolve the configuration file the plugin uses [`postcss-load-config`](https://github.com/postcss/postcss-load-config) module. Check out the project [readme](https://github.com/postcss/postcss-load-config#readme) for the complete list of supported config file formats.
