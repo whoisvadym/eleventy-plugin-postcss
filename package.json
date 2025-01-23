@@ -3,11 +3,9 @@
   "version": "1.0.4",
   "description": "Eleventy plugin for PostCSS",
   "main": ".eleventy.js",
+  "type": "module",
   "engines": {
-    "node": ">=7.6.0"
-  },
-  "11ty": {
-    "compatibility": ">=1.0.0"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "demo": "npx @11ty/eleventy --input=demo --output=demo/_site --config=demo/.eleventy.js",
@@ -29,23 +27,27 @@
     "post",
     "css"
   ],
-  "author": "Vadym (https://github.com/pewstiepoll)",
+  "author": "Vadym (https://github.com/whoisvadym)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pewstiepoll/eleventy-plugin-postcss/issues"
+    "url": "https://github.com/whoisvadym/eleventy-plugin-postcss/issues"
   },
-  "homepage": "https://github.com/pewstiepoll/eleventy-plugin-postcss#readme",
+  "homepage": "https://github.com/whoisvadym/eleventy-plugin-postcss#readme",
   "dependencies": {
-    "postcss": "8.4.31",
-    "postcss-load-config": "3.1.3"
+    "postcss": "^8.5.1",
+    "postcss-load-config": "^6.0.1"
+  },
+  "peerDependencies": {
+    "@11ty/eleventy": "^3.0.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "ava": "4.1.0",
-    "eslint": "8.11.0",
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-plugin-import": "2.25.4",
-    "postcss-mixins": "9.0.2",
-    "postcss-preset-env": "7.4.2"
+    "@11ty/eleventy": "^3.0.0",
+    "@eslint/js": "^9.18.0",
+    "ava": "^6.2.0",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "postcss-mixins": "^11.0.3",
+    "postcss-nested": "^7.0.2",
+    "postcss-preset-env": "^10.1.3"
   }
 }
