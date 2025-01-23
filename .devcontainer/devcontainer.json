@@ -8,7 +8,8 @@
 		"vscode": {
 			"extensions": [
 				"dbaeumer.vscode-eslint",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"GitHub.vscode-github-actions"
 			]
 		}
 	}
