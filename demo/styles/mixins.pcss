@@ -1,9 +1,9 @@
-@define-mixin icon $network, $color: blue {
-    .icon.is-$(network) {
+@define-mixin icon $social, $color: blue {
+    .icon.is-$(social) {
         color: $color;
         @mixin-content;
     }
-    .icon.is-$(network):hover {
+    .icon.is-$(social):hover {
         color: white;
         background: $color;
     }

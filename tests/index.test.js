@@ -1,6 +1,6 @@
-const fs = require('fs');
-const test = require('ava');
-const path = require('path');
+import fs from 'fs';
+import test from 'ava';
+import path from 'path';
 
 const demoFolderRelativePath = 'demo/_site/styles';
 const readOutputFile = (filename) => fs.readFileSync(path.resolve(process.cwd(), demoFolderRelativePath, filename), 'utf-8');
