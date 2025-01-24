@@ -1,7 +1,9 @@
 demo/
 tests/
+.github/
 .vscode/
+.devcontainer/
 
 .eslintignore
-.eslintrc.json
-.postcssrc.json
+postcss.config.js
+eslint.config.json
