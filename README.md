@@ -26,11 +26,11 @@ export default function (eleventyConfig) {
 OR
 ```js
 // CommonJS 
-const PostCSSPlugin = require("eleventy-plugin-postcss");
-
-module.exports = (eleventyConfig) => {
+module.exports = async (eleventyConfig) => {
+    // Since the plugin is ESM, use `await import` => Requires to use .default
+    const PostCSSPlugin = await import("eleventy-plugin-postcss");
     // Enable the plugin in you project
-    eleventyConfig.addPlugin(PostCSSPlugin);
+    eleventyConfig.addPlugin(PostCSSPlugin.default);
 }
 ```
 
